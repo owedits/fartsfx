@@ -1,6 +1,6 @@
 
 if game:GetService("CoreGui"):FindFirstChild("PSX | Premium") then
-    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Finded another menu. \nDestroying it... \nPlease execute again.")
+    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Found another menu. \nDestroying it... \nPlease execute again.")
         for i = 0,5 do
             game:GetService("CoreGui")["PSX | Premium"]:Destroy()
         end
@@ -8,7 +8,7 @@ elseif not game:GetService("CoreGui"):FindFirstChild("PSX | Premium") then
     print("Didnt find other menus")
 end
 --------------------------
-require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Thanks for buying my script \nDeveloper: \n!KrystekYT#8687")
+require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Thanks for using! \nDeveloper: \now#3295")
 
 if game.PlaceId == 6284583030 then
     local start = tick()
@@ -134,11 +134,11 @@ local function SecondsToClock(seconds)
 local page = venyx:addPage("Credits", 5832745520)
 local Credits1 = page:addSection("Authors:")
 
-Credits1:addButton("!KrystekYT#8687", function(dsclink)
+Credits1:addButton("ow#3295", function(dsclink)
     if dsclink then
         venyx:Notify("Text Copied", "Now Just Paste It :) ")
     end
-    setclipboard('!KrystekYT#8687')
+    setclipboard('ow#3295')
 end)
 
 ----------------------------------
@@ -756,14 +756,14 @@ end)
 misc1:addButton("Better Search", function(bettersearchmessage)
     require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Better Search Loaded \nNow you can use type: \n- Pet Name \n- Pet Nickname \n- Pet Rarity (Exclusive, Mythical, Legendary, Epic, Rare, Basic) \n- Pet Type (Dark Natter, Rainbow, Gold and Normal \n- Enchants like Royalty etc")
     print("Pet Counter Loaded")
-    loadstring(game:HttpGet('https://pastebin.com/raw/JUEtgq95'))()
+    loadstring(game:HttpGet('https://pastebinp.com/raw/JUEtgq95'))()
 end)
 
 ------------------
 
 misc1:addButton("Pet Counter", function(petcountermessage)
     print("Pet Counter Loaded")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KrystekYTpv/PSXpv/main/petcounter.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/owedits/fartsfx/main/pcounfart.lua", true))()
     if petcountermessage then
         venyx:Notify("Pet Counter Started", "Click F9 to check counted pets")
     end
@@ -895,7 +895,7 @@ if autofusefunc == true then
     print("Selected Count: ", _G.PetCount)
     print("Selected Type: ", _G.Type)
     print("Selected Pet: ", _G.SelectedPet)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/KrystekYTpv/PSXpv/main/autofuse.lua'))() -- runs script as I use while wait and _G.enabled so loop ends when _G.enabled is false
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/fusefart.lua'))() -- runs script as I use while wait and _G.enabled so loop ends when _G.enabled is false
 elseif autofusefunc == false then
     _G.Enabled = false
     print("_G.Enabled: ", _G.Enabled)
@@ -1104,7 +1104,7 @@ end)
 --end
 --end
 --
-----loadstring(game:HttpGet('https://raw.githubusercontent.com/KrystekYT/PetSimulatorX/main/autoenchant.lua'))()
+----loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/enchfart.lua'))()
 --end)
 -------------------------
 
@@ -1279,7 +1279,7 @@ end)
 -------------------------------------------------------------------------------------------------
 
 misc1:addButton("Stats Tracker", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/dPXXyp4A'))()
+    loadstring(game:HttpGet('https://pastebinp.com/raw/dPXXyp4A'))()
     print("Stats Tracker Loaded")
 end)
 
@@ -1340,7 +1340,7 @@ end)
 -------------------------------------------------------------------------------------------------
 
 misc1:addButton("Ultra Lag Reducer | Dont use to play", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/KrystekYTpv/PSXpv/main/ultrafpsboost.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/ultrfpsfart.lua'))()
     print("Ultra Lag Reducer Loaded")
 end)
 
