@@ -1,4 +1,4 @@
-userids = {
+check = {
 [320664513] = true, -- KrystekYT
 [294992884] = true, -- DjRudzik
 [2898280324] = true, -- Weronika9896
@@ -24,5 +24,5 @@ userids = {
 [2712629196] = true, -- istudy7
 --[] = true, -- 
 }
-return userids
+return check
 ----
