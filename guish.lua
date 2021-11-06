@@ -2168,5 +2168,5 @@ do
 	end
 end
 
-print("dino was here :\)")
+print("ow menu activated. Enjoy.")
 return library

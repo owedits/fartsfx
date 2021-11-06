@@ -1,14 +1,14 @@
 
-if game:GetService("CoreGui"):FindFirstChild("SainPets | Premium Panel v0.0.1") then
-    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Found another menu. \nDestroying it... \nPlease execute again.")
+if game:GetService("CoreGui"):FindFirstChild("ow menu | Premium Panel v0.0.1") then
+    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Another menu is found. \n Please execute again.")
         for i = 0,5 do
-            game:GetService("CoreGui")["SainPets | Premium Panel v0.0.1"]:Destroy()
+            game:GetService("CoreGui")["ow menu | Premium Panel v0.0.1"]:Destroy()
         end
-elseif not game:GetService("CoreGui"):FindFirstChild("SainPets | Premium Panel v0.0.1") then
-    print("Didnt find other menus")
+elseif not game:GetService("CoreGui"):FindFirstChild("ow menu | Premium Panel v0.0.1") then
+    print("Starting.. All seems fine.")
 end
 --------------------------
-require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Thanks for using! \nDeveloper: \now#3295")
+require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Press OK to start ow menu.")
 
 if game.PlaceId == 6284583030 then
     local start = tick()
@@ -22,17 +22,17 @@ end
 
 
 -- init
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrystekYT/VenyxUI-Colored/main/petsimxVenyx"))()
-local venyx = library.new("SainPets | Premium Panel v0.0.1", 5013109572)
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/owedits/fartsfx/main/guish.lua"))()
+local venyx = library.new("ow menu | Premium Panel v0.0.1", 5013109572)
 
 -- themes
 local themes = {
-Background = Color3.fromRGB(24, 24, 24),
-Glow = Color3.fromRGB(0, 0, 0),
-Accent = Color3.fromRGB(10, 10, 10),
-LightContrast = Color3.fromRGB(20, 20, 20),
-DarkContrast = Color3.fromRGB(14, 14, 14),  
-TextColor = Color3.fromRGB(0, 255, 255)
+Background = Color3.fromRGB(23, 0, 1),
+Glow = Color3.fromRGB(255, 95, 95),
+Accent = Color3.fromRGB(23, 0, 1),
+LightContrast = Color3.fromRGB(44, 13, 19),
+DarkContrast = Color3.fromRGB(23, 0, 1),  
+TextColor = Color3.fromRGB(255, 105, 138)
 }
 
 
@@ -46,7 +46,7 @@ if GC then
         end
     end
 else
-    print("lol bad exploit")
+    print("Unlucky.")
     local vu = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:connect(function()
         vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -131,12 +131,12 @@ local function SecondsToClock(seconds)
 
 -------------------------------------------------------------------------------------------------
 -- credits page
-local page = venyx:addPage("Credits", 5832745520)
-local Credits1 = page:addSection("Authors:")
+local page = venyx:addPage("Developers", 5832745520)
+local Credits1 = page:addSection("Main Developer:")
 
 Credits1:addButton("ow#3295", function(dsclink)
     if dsclink then
-        venyx:Notify("Text Copied", "Now Just Paste It :) ")
+        venyx:Notify("Discord ID Copied", "You can paste it.")
     end
     setclipboard('ow#3295')
 end)
@@ -147,9 +147,9 @@ local Credits2 = page:addSection("Discord:")
 
 Credits2:addButton("Copy Discord Link", function(dsclink)
     if dsclink then
-        venyx:Notify("Link Copied", "Now Just Paste It :) ")
+        venyx:Notify("Discord Link Copied", "You can paste it.")
     end
-    setclipboard('https://discord.gg/3FV3qCMkU2')
+    setclipboard('https://discord.gg/p4jjhBq6vS')
 end)
 
 
@@ -158,62 +158,55 @@ end)
 -- page1
 
 
-local page = venyx:addPage("Farming", 1379498635)
-local section1 = page:addSection("Farming")
-local section2 = page:addSection("Farming Addons")
+local page = venyx:addPage("Auto farm", 1379498635)
+local section1 = page:addSection("Auto farm.")
+local section2 = page:addSection("Automated stuff.")
 -------------------------------------------------------------------------------------------------
 -- Misc page
-local page = venyx:addPage("Misc", 37219625)
-local misc1 = page:addSection("Misc")
-local misc2 = page:addSection("Remote Things")
+local page = venyx:addPage("Miscellaneous", 37219625)
+local misc1 = page:addSection("Miscellaneous.")
+--local misc2 = page:addSection("Open menus.")
 
 -------------------------------------------------------------------------------------------------
 
 -- Egg page
 local page = venyx:addPage("Eggs", 5094819983)
-local eggs1 = page:addSection("Eggs")
+local eggs1 = page:addSection("Automated egg opener")
 -------------------------------------------------------------------------------------------------
 
 -- Pets page
 local page = venyx:addPage("Pets", 329532393)
-local pets1 = page:addSection("Auto Fuse")
-local pets2 = page:addSection("Auto Gold/Rainbow")
-local pets3 = page:addSection("Auto Enchant | Disabled")
-local pets4 = page:addSection("Dark Matter")
+local pets1 = page:addSection("Automated fuse.")
+local pets2 = page:addSection("Automated golden or rainbow.")
+--local pets3 = page:addSection("Automated enchant | Temporarily disabled.")
+local pets4 = page:addSection("Automated dark matter.")
 
 -------------------------------------------------------------------------------------------------
 
 -- Troll page
-local page = venyx:addPage("Troll", 329532393)
-local troll1 = page:addSection("Troll")
+--local page = venyx:addPage("Troll", 329532393)
+--local troll1 = page:addSection("Troll")
 
 -------------------------------------------------------------------------------------------------
 -- Settings page
 local page = venyx:addPage("Settings", 5107159171)
-local Settings1 = page:addSection("Settings")
-local Settings2 = page:addSection("Theme")
-Settings1:addKeybind("Toggle Keybind Menu", Enum.KeyCode.RightShift, function(menu)
+local Settings1 = page:addSection("Settings.")
+local Settings2 = page:addSection("Theme.")
+Settings1:addKeybind("Toggle keybind.", Enum.KeyCode.RightShift, function(menu)
 venyx:toggle()
 end, function(menu)
 end)
 
 ------------
 
-_G.RenderingStatus = false
-Settings1:addKeybind("Toggle Rendering", Enum.KeyCode.B, function(render)
-        _G.RenderingStatus = not _G.RenderingStatus
-        local rs = game:GetService("RunService")
-        rs:Set3dRenderingEnabled(_G.RenderingStatus)
-        rs:setThrottleFramerateEnabled(not _G.RenderingStatus)
-end, function(render)
-end)
+
 
 
 ------------
 
-Settings1:addButton("Destroy GUI", function(destroygui)
-    game:GetService("CoreGui")["SainPets | Premium Panel v0.0.1"]:Destroy()
-    print("GUI Destroyed")
+Settings1:addButton("Destroy Menu", function(destroygui)
+    game:GetService("CoreGui")["ow menu | Premium Panel v0.0.1"]:Destroy()
+    print("Old menu destroyed.")
 end)
 -------------------------------------------------------------------------------------------------
 
@@ -223,7 +216,7 @@ section1:addDropdown("Method", MethodList, function(methodfunc)
     if methodfunc then
         _G.methodfunc = methodfunc
     end
-    print("Method: ", methodfunc)
+    print("Selected method: ", methodfunc)
 end)
 
 --------------------------------
@@ -231,11 +224,11 @@ end)
 
 local ItemToFarmList = {'All', 'Magma Chest', 'Enchanted Chest', 'Hell Chest', 'Haunted Chest', 'Angel Chest', 'Grand Heaven Chest', 'Giant Tech Chest', 'Giant Steampunk Chest'}
 
-section1:addDropdown("Item To Farm", ItemToFarmList, function(itemtofarmfunc)
+section1:addDropdown("Item to farm", ItemToFarmList, function(itemtofarmfunc)
     if itemtofarmfunc then
         _G.itemtofarmfunc = itemtofarmfunc
     end
-    print("Selected Item: ", itemtofarmfunc)
+    print("Selected item: ", itemtofarmfunc)
 end)
 
 --------------------------------
@@ -261,11 +254,11 @@ end)
 
 
 
-section1:addDropdown("Select Location", AreaListLoc, function(mapafunc)
+section1:addDropdown("Select location", AreaListLoc, function(mapafunc)
     if mapafunc then
         _G.mapafunc = mapafunc
     end
-    print("Area: ", mapafunc)
+    print("Selected area: ", mapafunc)
 end)
 
 -------------------------------------------------------------------------------------------------
@@ -482,7 +475,7 @@ if _G.MyConnection then _G.MyConnection:Disconnect() end
         game.Workspace.__THINGS.__REMOTES["claim orbs"]:FireServer({{Orb.Name}})
     end)
 
-section1:addToggle("Farming Toggle", false, function(farmingtogglefunc)
+section1:addToggle("Enable automated farm", false, function(farmingtogglefunc)
 if farmingtogglefunc == true then
     _G.FarmingToggle = true
 elseif farmingtogglefunc == false or destroygui then
@@ -699,7 +692,7 @@ end
 
 ---------------
 
-section2:addToggle("Auto Triple Damage", false, function(autotripledamage)
+section2:addToggle("Auto use triple damage", false, function(autotripledamage)
 
 if autotripledamage == true then
     _G.TripleDamage1 = true
@@ -712,14 +705,14 @@ while wait(5) do
   if _G.TripleDamage1 then 
     if not game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage") then
         workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Triple Damage"})
-    print("Triple Damage Boost Checked")
+    print("Triple damage boost checked")
     end
   end
 end
 end)
 ---------------
 
-section2:addToggle("Auto Triple Coins", false, function(autotriplecoins)
+section2:addToggle("Auto use triple coins", false, function(autotriplecoins)
 
 if autotriplecoins == true then
     _G.TripleCoins1 = true
@@ -731,7 +724,7 @@ while wait(5) do
     if _G.TripleCoins1 then
         if not game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins") then
             workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Triple Coins"})
-        print("Triple Coin Boost Checked")
+        print("Triple coin boost checked")
     end
   end
 end
@@ -739,43 +732,52 @@ end)
 
 ----------
 
-section2:addButton("Click ME!", function(idiota)
-    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("You are such a \nIDIOT XDD.")
-    wait(1)
-    while true do
-    while true do
-    end
-    end
-end)
+
 
 ------------------
 -- Misc
 
 
 
-misc1:addButton("Better Search", function(bettersearchmessage)
-    require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Better Search Loaded \nNow you can use type: \n- Pet Name \n- Pet Nickname \n- Pet Rarity (Exclusive, Mythical, Legendary, Epic, Rare, Basic) \n- Pet Type (Dark Natter, Rainbow, Gold and Normal \n- Enchants like Royalty etc")
-    print("Pet Counter Loaded")
-    loadstring(game:HttpGet('https://pastebinp.com/raw/JUEtgq95'))()
-end)
+--misc1:addButton("Better Search", function(bettersearchmessage)
+ --   require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Better Search Loaded \nNow you can use type: \n- Pet Name \n- Pet Nickname \n- Pet Rarity (Exclusive, Mythical, Legendary, Epic, Rare, Basic) \n- Pet Type (Dark Natter, Rainbow, Gold and Normal \n- Enchants like Royalty etc")
+ ---   print("Pet Counter Loaded")
+ --   loadstring(game:HttpGet('https://pastebinp.com/raw/JUEtgq95'))()
+--end)
 
 ------------------
 
-misc1:addButton("Pet Counter", function(petcountermessage)
-    print("Pet Counter Loaded")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/owedits/fartsfx/main/pcounfart.lua", true))()
-    if petcountermessage then
-        venyx:Notify("Pet Counter Started", "Click F9 to check counted pets")
-    end
-end)
+--misc1:addButton("Pet Counter", function(petcountermessage)
+   -- print("Pet Counter Loaded")
+   -- loadstring(game:HttpGet("https://raw.githubusercontent.com/owedits/fartsfx/main/pcounfart.lua", true))()
+  --  if petcountermessage then
+  --      venyx:Notify("Pet Counter Started", "Click F9 to check counted pets")
+  --  end
+--end)
 
 -------------------------------------------------------------------------------------------------
 --page2
 
 local pathToScript = game.Players.LocalPlayer.PlayerScripts.Scripts.Game['Open Eggs']
 local oldFunc = getsenv(pathToScript).OpenEgg
+----
+local Eggs = {} 
+for i,v in pairs(game.ReplicatedStorage.Game.Eggs:GetChildren()) do 
+    for i2,v2 in pairs(v:GetChildren()) do 
+        table.insert(Eggs, v2.Name)
+    end 
+end
 
-eggs1:addToggle("Remove Egg Animation", false, function(delanimation)
+eggs1:addDropdown("Select egg", Eggs, function(eggor)
+    if eggor then
+        _G.Egg = eggor
+    end
+    --print("Text: ", eggor)
+    --print("_G.Egg: ", _G.Egg)
+end)
+
+----
+eggs1:addToggle("Remove egg opening animation", false, function(delanimation)
     if delanimation == true then 
         getsenv(pathToScript).OpenEgg = function() return end 
     else
@@ -785,7 +787,7 @@ end)
 
 -------------------------------------------------------------------------------------------------
 
-eggs1:addToggle("Triple Egg Gamepass", false, function(triplegamepass)
+eggs1:addToggle("Use triple eggs | Only if you have the pass", false, function(triplegamepass)
 
 if triplegamepass == true then
     _G.TripleEgg = true
@@ -798,23 +800,10 @@ _G.TripleEgg = false
 
 -------------------------------------------------------------------------------------------------
 
-local Eggs = {} 
-for i,v in pairs(game.ReplicatedStorage.Game.Eggs:GetChildren()) do 
-    for i2,v2 in pairs(v:GetChildren()) do 
-        table.insert(Eggs, v2.Name)
-    end 
-end
 
-eggs1:addDropdown("Select Egg", Eggs, function(eggor)
-    if eggor then
-        _G.Egg = eggor
-    end
-    --print("Text: ", eggor)
-    --print("_G.Egg: ", _G.Egg)
-end)
 ----------------------------
 
-eggs1:addToggle("Auto Open Egg", false, function(dropegg)
+eggs1:addToggle("Enable automated egg opener.", false, function(dropegg)
 shared.toggle3drop = dropegg
 end)
 local openeegg = eggor
@@ -857,7 +846,7 @@ end
 
 --fuse
 --local PetsList = {'Vampire Bat', 'Werewolf'}
-pets1:addDropdown("Select Pet", PetNamesTable, function(petfunc)
+pets1:addDropdown("Select pet", PetNamesTable, function(petfunc)
     if petfunc then
         _G.SelectedPet = petfunc
         _G.FuseList = {
@@ -866,18 +855,18 @@ pets1:addDropdown("Select Pet", PetNamesTable, function(petfunc)
             };
         }
     end
-    print("Selected Pet: ",  _G.SelectedPet)
+    print("Selected pet: ",  _G.SelectedPet)
 end)
 ------------------------------------------
 local TypeList = {'Normal', 'Gold', 'Rainbow'}
-pets1:addDropdown("Select Type", TypeList, function(typefunc)
+pets1:addDropdown("Select pet type", TypeList, function(typefunc)
 if typefunc then
     _G.Type = typefunc
 end
-print("Selected Type: ", _G.Type)
+print("Selected type: ", _G.Type)
 end)
 ------------------------------------------
-pets1:addSlider("Select Count", 3, 3, 12, function(countfusefunc)
+pets1:addSlider("Select pet amount", 3, 3, 12, function(countfusefunc)
 if countfusefunc then
     _G.PetCount = countfusefunc
     _G.FuseList = {
@@ -888,13 +877,13 @@ if countfusefunc then
 --print("Selected Count: ", _G.PetCount)
 end)
 ------------------------------------------
-pets1:addToggle("Auto Fuse Selected", false, function(autofusefunc)
+pets1:addToggle("Enable automated fuse", false, function(autofusefunc)
 if autofusefunc == true then
     _G.Enabled = true
     print("_G.Enabled: ", _G.Enabled)
-    print("Selected Count: ", _G.PetCount)
-    print("Selected Type: ", _G.Type)
-    print("Selected Pet: ", _G.SelectedPet)
+    print("Selected count: ", _G.PetCount)
+    print("Selected type: ", _G.Type)
+    print("Selected pet: ", _G.SelectedPet)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/fusefart.lua'))() -- runs script as I use while wait and _G.enabled so loop ends when _G.enabled is false
 elseif autofusefunc == false then
     _G.Enabled = false
@@ -908,7 +897,7 @@ end)
 ---------------------------------------
 --auto gold/rainbow
 
-pets2:addSlider("Select Count", 0, 1, 6, function(countcombinefunc)
+pets2:addSlider("Select pet amount", 0, 1, 6, function(countcombinefunc)
     if countcombinefunc then
         _G.CountCombineFunc1 = countcombinefunc
     end
@@ -917,7 +906,7 @@ end)
 
 ------------------------------------------
 
-pets2:addToggle("Gold", false, function(togglegoldfunc)
+pets2:addToggle("Auto golden", false, function(togglegoldfunc)
     
 if togglegoldfunc == true then
     _G.ToggleGold = true
@@ -927,7 +916,7 @@ end
 end)
 
 
-pets2:addToggle("Rainbow", false, function(toggleraibowfunc)
+pets2:addToggle("Auto rainbow", false, function(toggleraibowfunc)
     
 if toggleraibowfunc == true then
     _G.ToggleRainbow = true
@@ -951,7 +940,7 @@ end)
 
 ---------------------------------------
 
-pets2:addToggle("Start Auto Gold/Rainbow", false, function(autocombinefunc)
+pets2:addToggle("Enable automated golden or rainbow", false, function(autocombinefunc)
     
 if autocombinefunc == true then
     _G.AutoCom = true
@@ -1129,11 +1118,11 @@ pets4:addButton("Remaining Time Check", function()
 
         local returnstring = ""
         for i,v in pairs(GameLibrary.Save.Get().DarkMatterQueue) do
-            local timeleft = 'Done!'
+            local timeleft = 'Ready.'
             if math.floor(v.readyTime - os.time()) > 0 then
                 timeleft = SecondsToClock(math.floor(v.readyTime - os.time()))
             end
-            local stringthing = PetList[v.petId] .." will be ready in: ".. timeleft
+            local stringthing = PetList[v.petId] .." going to be ready in: ".. timeleft
             returnstring = returnstring .. stringthing .. "\n"
         end
         require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New(returnstring)
@@ -1142,17 +1131,17 @@ end)
 
 -------------------------------
 
-pets4:addDropdown("Select Pet", PetNamesTable, function(value)
+pets4:addDropdown("Select pet to dark matter", PetNamesTable, function(value)
     
 if value then
     _G.NameOfPet = value
 end
-print("Name Of Writed Pet", value)
+print("dark matter enabled", value)
 end)
 
 -------------------------------
 
-pets4:addSlider("Select Dark Matter Count", 0, 1, 6, function(countdarkmatterfunc)
+pets4:addSlider("Select amount of pets to dark matter", 0, 1, 6, function(countdarkmatterfunc)
     if countdarkmatterfunc then
         _G.CountDarkMatterFunc1 = countdarkmatterfunc
     end
@@ -1162,7 +1151,7 @@ end)
 
 -------------------------------
 
-pets4:addToggle("Auto Make Dark Matters", false, function(automakedarkmatters)
+pets4:addToggle("Enable auto-making dark matter pets", false, function(automakedarkmatters)
     
 if automakedarkmatters == true then
     _G.AutoMakeDarkMatter = true
@@ -1201,7 +1190,7 @@ end
 end)
 
 -------------------------------
-pets4:addToggle("Auto Claim Dark Matters", false, function(autoclaimdark)
+pets4:addToggle("Enable auto-claiming dark matter pets", false, function(autoclaimdark)
 
 if autoclaimdark == true then
     _G.AutoClaimDarkMatter = true
@@ -1226,7 +1215,7 @@ end)
 --page3
 
 
-misc1:addToggle("Auto Collect Rewards", false, function(autorewards)
+section2:addToggle("Auto collect rewards [Both VIP and Rank.]", false, function(autorewards)
 
 if autorewards == true then
     _G.AutoRewards1 = true
@@ -1256,11 +1245,14 @@ end
     --end
 end)
 
-
+section2:addButton("Stats Tracker", function()
+    loadstring(game:HttpGet('https://pastebinp.com/raw/dPXXyp4A'))()
+    print("Stats tracked activated")
+end)
 -------------------------------------------------------------------------------------------------
 
 
-misc1:addToggle("Give GamePasses", false, function(gamepasses)
+misc1:addToggle("Give gamepasses [Some are visual.]", false, function(gamepasses)
 shared.toggle3gamepasses = gamepasses
 game:GetService("RunService").RenderStepped:connect(function()
 if shared.toggle3gamepasses then
@@ -1278,14 +1270,11 @@ end)
 end)
 -------------------------------------------------------------------------------------------------
 
-misc1:addButton("Stats Tracker", function()
-    loadstring(game:HttpGet('https://pastebinp.com/raw/dPXXyp4A'))()
-    print("Stats Tracker Loaded")
-end)
+
 
 -------------------------------------------------------------------------------------------------
 
-misc1:addButton("Anti Afk", function()
+misc1:addButton("Anti afk", function()
 print("Anti Afk Loaded")
 local GC = getconnections or get_signal_cons
 if GC then
@@ -1297,7 +1286,7 @@ if GC then
         end
     end
 else
-    print("lol bad exploit")
+    print("Unlucky.")
     local vu = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:connect(function()
         vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -1330,77 +1319,77 @@ local function ByeLAG()
         end
     end
 
-misc1:addButton("Lag Reduction", function(AutoAntiLag)
-    if AutoAntiLag then
-        ByeLAG()
-    end
-    print("Lag Reduction Loaded")
-end)
+--misc1:addButton("Lag Reduction", function(AutoAntiLag)
+   -- if AutoAntiLag then
+    --    ByeLAG()
+   -- end
+  --  print("Lag Reduction Loaded")
+--end)
 
 -------------------------------------------------------------------------------------------------
 
-misc1:addButton("Ultra Lag Reducer | Dont use to play", function()
+misc1:addButton("Lag reducer [Good for AFKing.]", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/ultrfpsfart.lua'))()
-    print("Ultra Lag Reducer Loaded")
+    print("Lag reducer activated")
 end)
 
 -------------------------------------------------------------------------------------------------
 --Remote Things
-misc2:addButton("Pet Collection", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled
-end)
+--misc2:addButton("Pet Collection", function()
+  --  game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled
+--end)
 
-misc2:addButton("Fuse Pets", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled
-end)
+--	misc2:addButton("Fuse Pets", function()
+--		game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled
+--	end)
 
-misc2:addButton("Gold Machine", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled
-end)
+--	misc2:addButton("Gold Machine", function()
+--		game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled
+--	end)
 
-misc2:addButton("Rainbow Machine", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled
-end)
+--	misc2:addButton("Rainbow Machine", function()
+	--	game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled
+--	end)
 
-misc2:addButton("Dark Matter Machine", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled
-end)
+--	misc2:addButton("Dark Matter Machine", function()
+--		game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled
+--	end)
 
-misc2:addButton("Merchant", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled
-end)
+--	misc2:addButton("Merchant", function()
+--		game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled
+--	end)
 
-misc2:addButton("Enchant", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled
-end)
+--	misc2:addButton("Enchant", function()
+--		game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled
+--	end)
 
-misc2:addButton("Spooky Upgrades", function()
-    game:GetService("Players").LocalPlayer.PlayerGui.SpookyUpgrades.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.SpookyUpgrades.Enabled
-end)
+--	misc2:addButton("Spooky Upgrades", function()
+	--	game:GetService("Players").LocalPlayer.PlayerGui.SpookyUpgrades.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.SpookyUpgrades.Enabled
+	--end)
 
 -------------------------------------------------------------------------------------------------
 --Troll Page
 
-troll1:addButton("Visual Dupe Gems", function()
-function comma_value(amount)
-  local formatted = amount
-  while true do  
-    formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
-    if (k == 0) then
-      break
-    end
-  end
-  return formatted
-end
-
-local diamonds = game.Players.LocalPlayer.PlayerGui.Main.Right.Diamonds.Amount
-local old = diamonds.Text
-local oldNumber = string.gsub(old, ",", "")
-local newNumber = oldNumber * 2
-local new = comma_value(newNumber)
-local newString = tostring(new)
-diamonds.Text = newString
-end)
+--	troll1:addButton("Visual Dupe Gems", function()
+--	function comma_value(amount)
+--	  local formatted = amount
+--	  while true do  
+--		formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+--		if (k == 0) then
+--		  break
+--		end
+--	  end
+--	  return formatted
+--	end
+--
+--	local diamonds = game.Players.LocalPlayer.PlayerGui.Main.Right.Diamonds.Amount
+--	local old = diamonds.Text
+--	local oldNumber = string.gsub(old, ",", "")
+--	local newNumber = oldNumber * 2
+--	local new = comma_value(newNumber)
+--	local newString = tostring(new)
+--	diamonds.Text = newString
+--	end)
 
 
 -------------------------------------------------------------------------------------------------
