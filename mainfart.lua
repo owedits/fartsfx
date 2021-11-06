@@ -1,10 +1,10 @@
 
-if game:GetService("CoreGui"):FindFirstChild("PSX | Premium") then
+if game:GetService("CoreGui"):FindFirstChild("SainPets | Premium Panel v0.0.1") then
     require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("Found another menu. \nDestroying it... \nPlease execute again.")
         for i = 0,5 do
-            game:GetService("CoreGui")["PSX | Premium"]:Destroy()
+            game:GetService("CoreGui")["SainPets | Premium Panel v0.0.1"]:Destroy()
         end
-elseif not game:GetService("CoreGui"):FindFirstChild("PSX | Premium") then
+elseif not game:GetService("CoreGui"):FindFirstChild("SainPets | Premium Panel v0.0.1") then
     print("Didnt find other menus")
 end
 --------------------------
@@ -23,7 +23,7 @@ end
 
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrystekYT/VenyxUI-Colored/main/petsimxVenyx"))()
-local venyx = library.new("PSX | Premium", 5013109572)
+local venyx = library.new("SainPets | Premium Panel v0.0.1", 5013109572)
 
 -- themes
 local themes = {
@@ -212,7 +212,7 @@ end)
 ------------
 
 Settings1:addButton("Destroy GUI", function(destroygui)
-    game:GetService("CoreGui")["PSX | Premium"]:Destroy()
+    game:GetService("CoreGui")["SainPets | Premium Panel v0.0.1"]:Destroy()
     print("GUI Destroyed")
 end)
 -------------------------------------------------------------------------------------------------
